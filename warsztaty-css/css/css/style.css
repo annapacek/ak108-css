@@ -1,0 +1,39 @@
+/*selektor znacznika*/
+p {
+    font-size: 18px;
+    color: blue;
+    background-color: yellow;
+}
+/*selektor identyfikatora*/
+#selektory p{
+    background-color: green;
+}
+/*selektor klasy*/
+.example p{
+    font-size: 36px;
+}
+/*laczenie selektorow*/
+h1, 
+h2, 
+h3 {
+    color: red;
+}
+/*bezposredni potomek*/
+.direct > p {
+    background-color: gray;
+}
+/*selektor bliskiego rodzenstwa*/
+.child h2 + h3 {
+    font-size: 28px;
+}
+/*selektor rodenstwa*/
+.rodzenstwo h2 ~ h3 {
+    color: green;
+    font-size: 28px;
+}
+
+/*element wykluczajacy*/
+
+.wykluczajacy p:not(.not) {
+    background-color: gray;
+}
