@@ -1,0 +1,19 @@
+/*tlo #213b50, pole nieaktywne #2b4a64, pole aktywne #4e708c, ramka aktywnego pola i kolor tekstu #ffffff
+zeby sie podswietlaly aktywane okna to przez focus
+*/
+
+#formularz {
+    background-color: #213b50;
+    width: 40%;
+    padding: 20px;
+    height: 100%;
+}
+
+#formularz input,
+select,
+textarea {
+    margin-bottom: 7px;
+    background-color: #2b4a64;
+    border: 0;
+}
+
