@@ -8,6 +8,11 @@ p {
 #selektory p{
     background-color: green;
 }
+
+#example_id p{
+    font-size: 50px;
+}
+
 /*selektor klasy*/
 .example p{
     font-size: 36px;
@@ -36,4 +41,44 @@ h3 {
 
 .wykluczajacy p:not(.not) {
     background-color: gray;
+}
+
+/*kolejny potomny
+sa dwie linijki bo pierwsza na windowsa a druga na maca, przegladarka safari
+*/
+#nastepny ul li:nth-child(8),
+#nastepny ul li:nth-of-type(8) {
+    background-color: violet;
+}
+
+#nastepny ul li:nth-child(odd) {
+    background-color: red;
+}
+
+#nastepny ul li:nth-child(3n+3) {
+    background-color: aqua;
+}
+/*zaczniemy od kona listy, od drugiego elementu, skaczemy co 4*/
+#nastepny ul li:nth-last-child(4n+2) {
+    font-size: 26px
+}
+
+#pozycjonowanie {
+    background-color: green;
+    height: 500px;
+}
+
+#pozycjonowanie div:nth-child(1) {
+    height: 200px;
+    background-color: red;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#pozycjonowanie div:nth-child(2) {
+    height: 200px;
+    background-color: blue;
+
 }
