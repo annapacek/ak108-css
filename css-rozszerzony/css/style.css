@@ -1,0 +1,105 @@
+/* selektor atrybutu input[type=""] */
+
+/*selektor absolutny*/
+* {
+    font-size: 30px;
+}
+
+/*selektor pseudo elementu
+wchodzi w skład znacznika
+content musi by zawsze uzupelniony, nawet jesli ma byc pusty
+
+do contentu mozemy wrzucic unit code, np znaczek fb, koperty i inne rzeczy i zawsze wyprzedzamy je \, albo tym drugim slashem
+*/
+
+#kontener p::before {
+    content: '*';
+}
+
+#kontener p::after {
+    content: '*';
+}
+/*łapie tylko pierwsza litere, i to musi byc litera a nie znak interpunkcyjny*/
+#kontener h1::first-letter {
+    color: red;
+}
+
+#kontener p::first-line {
+    color: red;
+}
+
+/*pseudo klasy linkow zawsze musza byc w tej kolejnosci
+hover, podswietla na jakis kolor kiedy najezdzamy
+*/
+
+#link a:link {
+    color: pink;
+}
+
+#link a:visited {
+    color: gray;
+}
+
+#link a:hover {
+    color:yellow;
+}
+
+#link a:active {
+    color: red;
+}
+
+/*focus na imput*/
+
+#formularz input:focus {
+    color: red;
+}
+
+/*pseudoklasy target lang 
+link bedzie odwolywal sie do div kontener i tworzyl przy tym border*/
+div:target {
+    border: 1px solid blue;
+}
+
+div[lang="pl"] p {
+    background-color: gray;
+}
+
+/*childs*/
+
+#child ul li:first-child {
+    font-size: 40px;
+}
+
+#child ul li:last-child {
+    background-color: yellow;
+}
+
+#only-child span:only-child {
+    color: red;
+}
+
+div:empty {
+    height: 300px;
+    width: 300px;
+    background-color: red;
+}
+
+/*atrybuty*/
+
+/*ten ponizej wybierze selektor z pelna nazwa cokolwiek, nie zadziala jesli wpiszemy kolwiek, albo co, musi byc pelne slowo*/
+#atrybuty input[title~="cokolwiek"] {
+    border: 1px solid green;
+}
+/*z gwaizdka zamiast tyldy zadziala na wsyzstkie elementy*/
+#atrybuty input[title*="kolwiek"] {
+    border: 1px solid red;
+}
+
+/*sprawdza wszystkie czy zaczynaja sie najak*/
+#atrybuty input[title^="jak"] {
+    border: 1px solid blue;
+}
+
+#atrybuty input[title$="wiek"] {
+    border: 1px solid blue;
+}
