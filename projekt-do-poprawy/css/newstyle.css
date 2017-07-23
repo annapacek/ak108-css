@@ -1,0 +1,130 @@
+/*usuwamy marginesy dla body, ustawiamy na zero, moj kod
+
+moj kod, ponizej od Marcina
+body {
+    margin: 0;
+    font-family: 'Lato';
+}
+
+#menu {
+    text-align: center;
+    width: 100%;
+    top: 0px;
+    background-color: #000000;
+    padding: 10px;
+}
+/*-- sprawic zeby elementty z listy byly ustawione blokowo a nie jeden pod drugim 
+.menu-item {
+    list-style: none;
+    display: inline-block;
+    
+}
+
+
+#header {
+    position: relative;
+    
+}
+
+#header img {
+    width: 100%;
+}
+#header #main-header-text {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    color: white;
+    
+}
+
+#about {
+    text-align: center; 
+    color: black;
+}
+
+#contact-header {
+    text-align: center;
+}
+
+#contact {
+    background-color: black;
+    padding: 20px;
+    color: white;
+}
+
+#contact-content {
+    text-align: center;
+}*/
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif; /*jezeli nie znajdzie czcionki lato to uzyje tej zestawu szeregowych*/
+}
+
+/*naviagation*/
+#menu {
+    background-color: black;
+}
+
+#menu ul {
+    padding: 0;
+    margin:0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#menu ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/*header*/
+#header {
+    position: relative;
+}
+#header img {
+    width: 100%
+}
+
+#header #main-header-text {
+    position: absolute;
+    top: 50%; /*zeby byl od gory odsuniety wzgledem header*/
+    color: white;
+    text-transform: uppercase; /*litery beda drukowane*/
+    text-align: center;
+    width: 100%; /*bo tekst align nie dzialal bo element nie byl na pelnej szerokosci*/
+}
+
+/*about*/
+
+#about {
+    text-align: center; 
+    padding: 20px 50px /*20 gora dol, 50 lewo prawo, usuniemy potem marginesy zeby modulowac szerokosci tylko paddingiem*/
+}
+
+#about #about-header {
+    margin-top: 0;
+}
+
+#about .about-contenet:nth-child(2),
+#about .about-content:last-child {
+    margin-bottom: 0;
+}
+/*footer*/
+#contact {
+    background-color: black;
+    padding: 50px 0 20px 0px;
+    color: white;
+    text-align: center;
+}
+
+#contact #contact-content a{
+    color: white;
+    font-style: normal;
+}
