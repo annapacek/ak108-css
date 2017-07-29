@@ -78,11 +78,13 @@ div[lang="pl"] p {
     color: red;
 }
 
+/*
 div:empty {
     height: 300px;
     width: 300px;
     background-color: red;
 }
+*/
 
 /*atrybuty*/
 
@@ -103,3 +105,177 @@ div:empty {
 #atrybuty input[title$="wiek"] {
     border: 1px solid blue;
 }
+
+/* inline block */
+
+#inline-block {
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+    text-align: center;
+}
+
+#inline-block .inline-block-inner {
+    width: 200px;
+    height: 200px;
+    background-color: red; 
+    display: inline-block;
+/* ale tu juz ie zadziala inline-height: 20px czy 400px, to zadziała tylko na tekst   */
+}
+
+/* inline-block li - zamiast listy itemow wyswietli elementy w linii*/
+#inline-block-ul ul li {
+    display: inline-block;
+}
+
+/*float*/
+#floated .floated-inner {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    float: left;
+}
+
+/*clear float*/
+#floated .clear {
+    clear: left;
+}
+/*transition
+transition property jest przed wywolaniem akcji/pseudo klas - bo inaczej po koncu akcji bedzie przeskakiwac skokowo
+*/
+/*wystarczy dodac wlasciwosc transition-duration poniewaz transition-property domyslnie ustawiona jest na all*/
+    /*akcja wywolywana po dwoch sekundach po okresleniu elementu kursorem, zeby znowu zmienic kolor musimy zabrac myszke z elementu, to jest czas trwania animacji
+    
+    uzywanie przedrostkow dla roznych przeglodarek
+    -o-transition-property: background-color;
+    -ms-transition-property: background-color;
+    -moz-transition-property: background-color;
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    */
+#tranzycje {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+/*
+    transition-duration: 2s; 
+    transition-property: width;
+    transition-delay: 3s;
+    transition-timing-function: linear;
+*/
+    transition: width 5s linear 2s;
+
+}
+
+#tranzycje:hover {
+/*    background-color: blue;*/
+    width: 200px;
+}
+
+/*
+marginesy
+margin-top: 10px
+margin-right: 10px;
+margin-bottom: 10px;
+margin-left: 10px;
+
+margin: 10px; - jednoparametrowy lapie wszystkie strony
+margin: 10px 20 px; - dwuparametrowy lapie gora-dol lewo-prawo
+margin: 10px 10px 10px - trzyparametrowy: gora, lewo-prawo, dol
+margin: 10px 10px 10px 10px - czteroparametrowy gora, prawo, dol, lewo
+
+*/
+
+#outern {
+    width: 100%;
+}
+
+#outern .square {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    transition-duration: 2s;
+}
+
+#outern .red {
+    background-color: red;
+    transition-property: width;
+}
+
+#outern .blue {
+    background-color: blue;
+    transition-property: height;
+}
+
+#outern .green {
+    background-color: green;
+    transition-property: width, height;
+}
+
+#outern .red:hover {
+    width: 300px;
+}
+
+#outern .blue:hover {
+    height: 300px;
+}
+
+#outern .green:hover {
+    height: 300px;
+    width: 300px;
+}
+
+/*url() - podajemy jako url ('sciezkadopliku')*/
+/*domyslnie, podane jest background-repeat: repeat - powtarzaj po x i po y
+mozna wylaczyc background-repeat,za pomoca no-repeat, mozna sterowac w ktorym kierunku tlo ma sie powtarzac np background-repeat: repeat-x, background-repeat: repeat-y
+*/
+
+/*background-position: wartosc wartosc - ustawia pozycje tla najpierw po x nastepnie po y. podajac jedna warotsc druga ustawiana jest domyslnie na center. Mozliwe ustawienia: left, center, top , bottom, % - lub inne jednostki miary*/
+
+/*background-attachmnet ustala sposob zachowania sie tla (fixed->efekt parallax, scroll, local)*/
+
+/*background size: okresla rozmiar obrazu w tle, mozliwe wartosci podane w absolutnych jednastkach miary (np px, cm, in) lub w relatwnych jedn miary (%, vh, vw i in), contain - zachowaj apect ratio obrazka i wypelnij nim kontener (do max rozmiaru obrazka) - zostawia przezroczyste paski- , cover - zachowaj aspect ratio obrazkai wypelnij nim kontener, ten ucina obrazek ale jest czesciej uzywany
+jesli uzywamy jednostek to podajemy tylko jedna miare zeby zachowac aspekt ratio*/
+
+#wlasciwosci-tla {
+    background-image: url('https://ogrod.smcloud.net/s/user_photos/thumbnails/50/64/01/5064019841099f23_620x0_zdjecie-duze.jpeg');
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+/* background: url('https://ogrod.smcloud.net/s/user_photos/thumbnails/50/64/01/5064019841099f23_620x0_zdjecie-duze.jpeg') no-repeat;
+    background-size: cover;*/
+}
+
+#overflow {
+    border: 1px dotted black;
+    height: 300px;
+    width: 300px;
+}
+/*dla ustalonych wysokosci i szerokosci contnet-box nie wlicza paddingow i border, border-box trzyma ustalona wysokosc i szerokosc, wliczajac padding i border*/
+#box-sizing {
+    border: 1px solid red;
+    padding: 50px;
+    width: 100%;
+    height: 300px;
+    background-color: grey;
+    box-sizing: border-box; /* trzyma ustalona szerokosc wliczajac padding i border, jak pojawil nam sie suwak na szerkosci to ta opcja ten suwak usuniemy*/
+}
+
+#responsywny {
+    width: 500px;
+    height: 500px;
+    background-color: green;
+}
+
+
+
+
+
+
+
+
+

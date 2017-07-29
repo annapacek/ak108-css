@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
+    <!-- meta:vp   -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <div id="kontener">
@@ -73,5 +78,84 @@
             <input type="text" title="jakkolwiek">
         </form>
     </div>
+    
+    <!-- inline block -->
+    <div id="inline-block">
+        <div class="inline-block-inner"></div>
+    </div>
+    
+    <!--  inline-block ul li 
+    #inline-block-ul>ul>li{list item $}*5
+      -->
+    <div id="inline-block-ul">
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+            <li>list item 4</li>
+            <li>list item 5</li>
+        </ul>
+    </div>
+    
+    <!--  floatowanie  
+    elementy zaburzaja flow dokumentu,a by przywrocici flow nalezy po elemencie floatowanym umiescic element z właściwością clear: right/left/both;
+    -->
+<!--
+    <div id="floated">
+        <div class="floated-inner"></div>
+        <div class="clear"></div>
+    </div>
+    
+-->
+<!-- tranzycje 
+pozwalaja na uzyskanie lefektu przejscia (animacji) danego elementu po akcji uzytkownika
+-->
+<!--      <div id="tranzycje"></div>-->
+      
+      <div id="outern">
+          <div class="square red"></div>
+          <div class="square blue"></div>
+          <div class="square green"></div>
+      </div>
+      
+<!--    sterowanie tlem  -->
+
+<div id="wlasciwosci-tla"></div>
+
+<!--overflow-->
+
+<div id="overflow">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi alias quasi nostrum, doloribus minima, corporis impedit reprehenderit esse quisquam earum, molestias provident? Fugiat officia autem ea consectetur ratione vero nesciunt.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde provident, commodi accusamus ratione ipsam quod ea vero, alias, pariatur quo harum explicabo, ducimus veritatis voluptatibus voluptas at sed repudiandae accusantium.</p>
+</div>
+
+<!--box-sizing-->
+<div id="box-sizing">
+    
+    
+</div>
+
+<!--responsywny-->
+<div id="responsywny"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

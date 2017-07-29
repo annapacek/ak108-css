@@ -1,0 +1,64 @@
+/*media queries tworzymy za pomoca slowa kluczowego media poprzedzonego @, astepnie podajemy od jakich parametrow ma byc uzaleznione wlaczenie konkretnych stylow*/
+
+/*zazwyczaj okresla sie 4 podzialy dla urzadzen:
+-480px;
+-768px;
+-980px;
+-1200px; 
+sterujemy za pomocą "max-width", czasem (rzadko...) zdarza sie, ze potrzeba pisac przedzialy (min-width and max-width)*/
+
+/*
+@media screen and (min-width: 768px) and (max-width: 1200px) { 
+    #responsywny {
+        background-color: red;
+    }
+}
+*/
+
+/*orientacje*/
+/*portrait - wyzszy niz szerszy*/
+/*
+@media (orientation: portrait) {
+    #responsywny {
+        width: 100%;
+    }
+}
+*/
+/*landscape - szerszy niz wyzszy*/
+/*
+@media (orientation: landscape) {
+    #responsywny {
+        width: 50%;
+    }
+}
+*/
+
+/*
+@media print {
+    #kontener p {
+        color: pink;
+    }
+}
+*/
+
+/*
+@media not all and (max-width: 600px) {
+    html {
+        background: red;
+    }
+}*/
+
+/*regula dla 768px nadpiszemy regule dla 1200px.
+przy tworzeniu responsywnych mniejsze wartosci leca na dol arkusz styli*/
+
+@media screen and (max-width: 1200px) { 
+    #responsywny {
+        background-color: grey;
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    #responsywny {
+        background-color: red;
+    }
+}
