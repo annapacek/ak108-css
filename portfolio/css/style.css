@@ -1,0 +1,179 @@
+* {
+    font-family: 'Lato', sans-serif;
+    color: #291f1a;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+/*stylowanie nawigacji*/
+#menu {
+    background-color: transparent; 
+    position: fixed;
+    text-align: right;
+    width: 100%
+}
+
+#menu ul {
+    padding: 0px;
+}
+
+#menu .menu-item {
+    display: inline-block;
+    list-style: none;
+    padding: 25px;
+}
+
+#menu .menu-item a {
+    text-decoration: none;
+    color: #ffffff;
+    transition-duration: 1s;
+    transition-property: color;
+    padding: 20px;
+/*    color: #1ac056;*/
+}
+
+#menu .menu-item a:hover {
+    color: #1ac056
+}
+/*na link zrobic hoover w zielonym kolorze*/
+/*stylowanie nagłówka*/
+#header {
+    height: 800px; /*100vh - 100% okna przegladarki, nie ustawiac wysokosci w inym miejscu!!!!!!*/
+    position: relative;
+    margin: 0 auto;
+    background-image: url('../img/img/header-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#headertext {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+}
+
+#header .headertext {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10vh;
+    font-weight: 100;
+}
+
+#header .main {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+#header .headertext span {
+    color: #1ac056;
+}
+
+/*stylowanie sekcji o mnie*/
+/*stylowanie zdjecia*/
+#about, 
+#skills,
+#portfolio {
+/*
+    width: 100%;
+    position: relative;
+*/
+    padding: 60px;
+}
+
+#about {
+    background-color: #f9fcfe;
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.6);
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.6);
+}
+
+#about-header,
+#skills-header,
+#portfolio-header {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#about-header span,
+#skills-header span,
+#portfolio-header span {
+    color: #1ac056;
+}
+
+#photo {
+    width: 50%;
+    margin: 0px;
+    float: left;
+    text-align: center;
+}
+
+#about-content {
+    width: 50%;
+    display: inline-block;
+}
+
+#photo .photo {
+    max-width: 50%;
+    border: 10px solid #ffffff;
+}
+
+ .clear {
+    clear: both;
+}
+
+#skills {
+    text-align: center;
+}
+
+#skills figure {
+    display: inline-block;
+    padding: 30px;
+}
+
+#portfolio-cont {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 33.33333%;
+    float: left;
+    height: 350px;
+    /*font-size: 0; dzieki temu nie bedzie bialych granic miedzy obrazkami, jak jest float to nie trzeba, tylko potem trzeba pamietac o zamianie czcionki przy text kontencie*/
+    /*height, float*/
+}
+
+.cont1 {
+    background-image: url('../img/img/portfolio1.jpg');  
+}
+
+.cont2 {
+    background-image: url('../img/img/portfolio2.jpg');  
+}
+.cont3 {
+    background-image: url('../img/img/portfolio4.jpg');
+}
+
+.mask {
+    background-color: rgba(42,61,79, 0.8);
+    opacity: 0;
+    height: 100%;
+    padding: 10px;
+}
+
+.border {
+    position: relative;
+    height: 100%;
+}
+
+.text-cont {
+    position: absolute;
+    height: 100%;
+}
+/*drugi div niebieski, opacity:0, backgroundcolor: rgba, height:100%, padding
+trzeci div matka
+i czwarty div z contentem zeby go wycentrowac*/
+
