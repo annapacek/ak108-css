@@ -3,6 +3,7 @@
 /*selektor absolutny*/
 * {
     font-size: 30px;
+    font-family: 'Raleway', sans-serif;
 }
 
 /*selektor pseudo elementu
@@ -271,7 +272,11 @@ jesli uzywamy jednostek to podajemy tylko jedna miare zeby zachowac aspekt ratio
     background-color: green;
 }
 
-
+/*czcionki
+h1 {
+font-family: "Lato", sans-serif;
+}
+*/
 
 
 
