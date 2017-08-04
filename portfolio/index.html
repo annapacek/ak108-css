@@ -104,15 +104,32 @@
     </section>
 
     <footer id="contact">
-        <h3 id="contact-header">Anna Pacek</h3>
-        <address id="contact-content">
-            Anna Pacek<br />
+              <h3 id="contact-header">Anna <span>Pacek</span></h3>
+       <div id="details">
+
+           <div class="conte">
             ul. Makowskiego 18/101<br />
             30-075 Kraków<br />
-            <a href="mailto:annapacek1991@gmail.com">annapacek1991@gmail.com</a>
-        </address>
-    </footer>
+            </div>
+            <div class="conte">
+            tel: 781 660 883<br />
+            e-mail: <a href="mailto:annapacek1991@gmail.com">annapacek1991@gmail.com</a>
+            </div>
+        </div>
+        <div id="form">
+<!--             <form action="https://formspree.io/annapacek1991@gmail.com" method="POST">-->
+            <input class="input" type="text" name="name" id="name" placeholder="Imię i nazwisko"><br>
+            <input class="input" type="text" name="mail" id="mail" placeholder="E-mail"><br>
+            <textarea class="textarea" id="message" maxlength=1000 name="message" placeholder="Treść wiadomości"></textarea><br>
+            <input class="send" type="submit" value="WYŚLIJ"><br>
+<!--            </form>-->
+        </div>
 
+        
+    </footer>
+        <div id="author">
+            <p>Copyright Anna Pacek</p>
+        </div>
 
 </body>
 

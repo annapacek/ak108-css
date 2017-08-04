@@ -26,7 +26,8 @@ body {
     padding: 25px;
 }
 
-#menu .menu-item a {
+#menu .menu-item a,
+#contact #details .conte a {
     text-decoration: none;
     color: #ffffff;
     transition-duration: 1s;
@@ -36,8 +37,14 @@ body {
 }
 
 #menu .menu-item a:hover {
-    color: #1ac056
+    color: #1ac056;
 }
+
+#contact #details .conte a:hover {
+    color: #1ac056;
+    text-decoration-line: underline;     
+}
+
 /*na link zrobic hoover w zielonym kolorze*/
 /*stylowanie nagłówka*/
 #header {
@@ -93,7 +100,8 @@ body {
 
 #about-header,
 #skills-header,
-#portfolio-header {
+#portfolio-header,
+#contact-header {
     margin-bottom: 25px;
     text-align: center;
     font-size: 40px;
@@ -101,7 +109,8 @@ body {
 
 #about-header span,
 #skills-header span,
-#portfolio-header span {
+#portfolio-header span,
+#contact-header span {
     color: #1ac056;
 }
 
@@ -176,4 +185,70 @@ body {
 /*drugi div niebieski, opacity:0, backgroundcolor: rgba, height:100%, padding
 trzeci div matka
 i czwarty div z contentem zeby go wycentrowac*/
+
+/* styling footer*/
+#contact {
+    position: relative;
+    background-color: #213b50;
+    padding: 60px;
+}
+
+#details {
+    display: inline-block;
+    width: 50%;
+}
+
+#form {
+    display: inline-block;
+    width: 49%;
+}
+
+#contact-header {
+    color: #FFFFFF;
+    text-align: left;
+}
+
+#details .conte {
+    margin-top: 20px;
+    color: #FFFFFF;
+    font-style: none;
+}
+
+#form {
+    text-align: right;
+}
+
+#form .input,
+#form .textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    background-color: #2F4E78;
+    border: 0;
+/*    color: #ffffff; */
+}
+
+#form .textarea {
+    height: 70px;
+}
+
+#form .send {
+    background-color: #1ac056;
+    color: #ffffff;
+    height: 40px;
+    width: 80px;
+} 
+
+#author {
+    background-color: #1F2C3D;
+}
+
+#author p {
+    color: white;
+}
+
+/*elementy w formularzu moze ustawic position relative, absolute?*/
+
+
+
 
