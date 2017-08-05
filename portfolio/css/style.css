@@ -8,47 +8,41 @@
 body {
     width: 100%;
 }
-/*stylowanie nawigacji*/
+
+/*nawigacja*/
 #menu {
-    background-color: transparent; 
-    position: fixed;
-    text-align: right;
-    width: 100%
+    background-color: #FFFFFF;  /*transparent jeśli ma być przeroczyste*/
+    position: fixed;            /*przypina pasek menu do góry strony*/
+    text-align: right;          /*wyrównuje elementy do prawej strony*/
+    width: 100%;                /*szerokość menu na szerokość przeglądarki*/
+    z-index: 1;                 /*menu naw nad background image-pierwszenstwo                                 wyswietlania*/
 }
 
 #menu ul {
-    padding: 0px;
+    padding: 0px;             /*nie ma paddingu po lewej stronie, tworzył sie                             poprzez strukturę listy*/
 }
 
 #menu .menu-item {
-    display: inline-block;
-    list-style: none;
-    padding: 25px;
+    display: inline-block;    /*elementy wyswietlane w linii, nie bloku*/
+    list-style: none;         /*brak kropki przy elemencie listy*/
+    padding: 20px;            /*powiększenie zakresu paska*/
 }
 
-#menu .menu-item a,
-#contact #details .conte a {
-    text-decoration: none;
-    color: #ffffff;
-    transition-duration: 1s;
-    transition-property: color;
-    padding: 20px;
-/*    color: #1ac056;*/
+/*element linku*/
+#menu .menu-item a {            
+    text-decoration: none;      /*brak podkreślenia w linku*/
+    color: #1ac056;             /*zielony kolor*/
+    padding: 20px;              /*zwiększenie powierzchni klikalnej linku*/
 }
 
-#menu .menu-item a:hover {
-    color: #1ac056;
-}
+/*menu toogle*/
+#menu .toggle, #drop {
+    display: none;               /*ukrywamy label menu i checkboxa*/
+} 
 
-#contact #details .conte a:hover {
-    color: #1ac056;
-    text-decoration-line: underline;     
-}
-
-/*na link zrobic hoover w zielonym kolorze*/
-/*stylowanie nagłówka*/
+/*nagłówek*/
 #header {
-    height: 800px; /*100vh - 100% okna przegladarki, nie ustawiac wysokosci w inym miejscu!!!!!!*/
+    height: 100vh; /*100vh - 100% okna przegladarki, nie ustawiac wysokosci w inym miejscu!!!!!!*/
     position: relative;
     margin: 0 auto;
     background-image: url('../img/img/header-background.jpg');
@@ -77,6 +71,7 @@ body {
 
 #header .headertext span {
     color: #1ac056;
+    font-weight: 400;
 }
 
 /*stylowanie sekcji o mnie*/
@@ -105,6 +100,7 @@ body {
     margin-bottom: 25px;
     text-align: center;
     font-size: 40px;
+    font-weight: 100;
 }
 
 #about-header span,
@@ -112,6 +108,7 @@ body {
 #portfolio-header span,
 #contact-header span {
     color: #1ac056;
+    font-weight: 400;
 }
 
 #photo {
@@ -144,9 +141,12 @@ body {
     padding: 30px;
 }
 
+/**/
+
 #portfolio-cont {
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: inline-block;
     width: 33.33333%;
     float: left;
@@ -171,24 +171,49 @@ body {
     opacity: 0;
     height: 100%;
     padding: 10px;
+    transition-property: opacity;
+    transition-duration: 1s;
 }
 
+.mask:hover {
+    opacity: 1;
+}
+/*robimy na niego hoover, opacity 1*/
 .border {
     position: relative;
     height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    text-align: center;
+}
+#text-cont-inn {
+    position: absolute;
+    margin: auto;
+    padding: 10px;
+    top: 50%;
+    transform:translateY(-50%);
+
 }
 
-.text-cont {
-    position: absolute;
+
+.text-cont h4,
+.text-cont h5,
+.text-cont p {
     height: 100%;
+    color: white;
+}
+
+.text-cont .fa {
+    color: #ffffff;
+    font-size: 26px;
 }
 /*drugi div niebieski, opacity:0, backgroundcolor: rgba, height:100%, padding
 trzeci div matka
 i czwarty div z contentem zeby go wycentrowac*/
 
-/* styling footer*/
+/* styling contact section*/
+
 #contact {
-    position: relative;
     background-color: #213b50;
     padding: 60px;
 }
@@ -209,10 +234,26 @@ i czwarty div z contentem zeby go wycentrowac*/
 }
 
 #details .conte {
-    margin-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     color: #FFFFFF;
-    font-style: none;
+    font-style: normal;
+    font-weight: 300;
 }
+
+#contact #details .conte a {
+    text-decoration: none;    /*brak podkreślenia w linku*/
+    color: #1ac056;            /*zielony kolor*/
+    padding: 20px;             /*zwiększenie powierzchni klikalnej linku*/
+    transition-duration: 1s;
+    transition-property: color;
+}
+
+#contact #details .conte a:hover {
+    text-decoration-line: underline;
+    color: #1ac056;
+}
+
 
 #form {
     text-align: right;
@@ -225,12 +266,27 @@ i czwarty div z contentem zeby go wycentrowac*/
     height: 40px;
     background-color: #2F4E78;
     border: 0;
-/*    color: #ffffff; */
+    padding: 10px;
+    color: #ffffff; 
 }
 
 #form .textarea {
     height: 70px;
+    font-family: "Consolas";
+    color: #ffffff;
 }
+
+::placeholder {
+    color: lightgray;
+}
+
+#form .input:focus, 
+#form .textarea:focus {
+    background-color: #4e708c;
+    color: #ffffff;
+    outline-color: #ffffff;
+}
+
 
 #form .send {
     background-color: #1ac056;
@@ -241,13 +297,44 @@ i czwarty div z contentem zeby go wycentrowac*/
 
 #author {
     background-color: #1F2C3D;
+    padding-left: 60px;
 }
 
 #author p {
     color: white;
 }
 
+
 /*elementy w formularzu moze ustawic position relative, absolute?*/
+#conteicons {
+    margin-bottom: 30px;
+}
+#conteicons .innicon {
+    display: inline-block;
+ margin: 10px;
+    text-align: center;
+    
+   
+
+    /*height width*/
+    
+}
+
+#conteicons .innicon .fa {
+    color: #ffffff;
+    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    padding-top:  5px;
+    text-align: center;
+}
+
+#conteicons .innicon .fa:hover {
+    color: #213b50;
+    border: 1px solid #213b50;
+    background-color: #FFFFFF;
+}
 
 
 
