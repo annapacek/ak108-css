@@ -1,8 +1,8 @@
-* {
+* {                                    /*ustawienia dla wszystkich elementów*/
     font-family: 'Lato', sans-serif;
     color: #291f1a;
     margin: 0px;
-    box-sizing: border-box;
+    box-sizing: border-box;            /*zeby calosc sie nie rozciagala po dodaniu paddingow i margin do sekcji*/
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 }
 
 #menu ul {
-    padding: 0px;             /*nie ma paddingu po lewej stronie, tworzył sie                             poprzez strukturę listy*/
+    padding: 0px;             /*nie ma paddingu po lewej stronie, tworzył sie poprzez strukturę listy*/
 }
 
 #menu .menu-item {
@@ -42,26 +42,26 @@ body {
 
 /*nagłówek*/
 #header {
-    height: 100vh; /*100vh - 100% okna przegladarki, nie ustawiac wysokosci w inym miejscu!!!!!!*/
-    position: relative;
-    margin: 0 auto;
+    height: 100vh;     /*100vh - 100% okna przegladarki, nie ustawiac wysokosci w inym miejscu!!!!!!*/
+    position: relative;    /*dla ustawienia tekstu nagłówka w pozycji absolutnej*/
     background-image: url('../img/img/header-background.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;    /*caly element wypelniony grafika, grafika moze sie nie zmiescic*/
 }
 
 #headertext {
     position: absolute;
-    width: 100%;
-    top: 30%;
+    width: 100%;  
+    text-align: center;        /*wycentrowanie elementu w poziomie*/
+    top: 30%;                  /*odsuniecie od góry*/
 }
 
 #header .headertext {
-    text-align: center;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 10vh;
-    font-weight: 100;
+    font-weight: 100; 
+
 }
 
 #header .main {
