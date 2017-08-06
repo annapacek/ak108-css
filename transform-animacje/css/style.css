@@ -1,0 +1,146 @@
+#rotowany {
+    background: url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRkU_YFnNRTqB4PBHvowmUVgaqmbTYyR5zvIBAVximVhrtvIGK7Nw') no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    transition: all 2s;   
+}
+
+#rotowany:hover {
+    transform: rotate(2880deg);
+}
+
+#odsuwany {
+    background-color: hotpink;
+    width: 400px;
+    height: 400px;
+    transition: all 2s;
+    display: inline-block;
+/*
+    transform: translateX(100px);        moga byc rozne jednostki
+    transform: translateY(100px);        jak dajemy transform pod transformem to nam si enadpiusje wlasciwosc
+*/
+/*    transform: translate(100px, 100px); w komentarzu bo robimy hover*/
+}
+
+#odsuwany:hover {
+    transform: translate(100px, 100px);
+}
+
+#odsuwany2 {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    background-color: darkcyan;
+    z-index: 1;
+    position: relative;  /*jesli chcemy zeby hover wsuwal sie pod, normalnie nasuwa sie nad*/
+}
+
+#skalowany-outer {
+    overflow: hidden;     /*zeby nam nie wychodzil poza kontener*/
+    width: 400px;
+    height: 400px;
+}
+
+#skalowany {
+    background: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSNQVQHpUFzaaVw1I8Zb1olDhI7PjvcciifVdN_yPkmEq-77ncanw') no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    transition: all 0.5s;
+}
+
+#skalowany:hover {
+    transform: scale(1.5); /* po samym X -> scaleX(1.5);*/
+}
+
+/*animacje*/
+#animowany {
+    width: 400px;
+    height: 400px;
+    background-color: chocolate;
+    animation-name: changeWidth;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/*
+@keyframes changeWidth {
+    from {
+        width: 1000px;
+    }
+    to {
+        width: 400px;
+    }
+} nie wraca do wartosci dziala skokowo
+*/
+
+@keyframes changeWidth {
+    0%, 100% {
+        width: 400px;
+    }
+    50% {
+        width: 1000px;
+    }
+}
+
+/*warsztaty snipety*/
+
+#outer {
+    background-color: aqua;
+    width: 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
