@@ -1,0 +1,297 @@
+/*1. wysrodkowanie diva w divie*/
+* {
+    margin: 0;
+    font-size: 25px;
+    
+}
+
+#outer {
+    background-color: blueviolet;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+#inner {
+    background-color: indianred;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+/*
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;        drugi sposób
+*/
+}
+
+/*przycisk klikalny*/
+
+#button {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: burlywood;
+    position: relative;
+    border: 1px solid black;
+    color: black;
+}
+
+#button a {
+    color: black;
+    font-size: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+    padding: 100px;
+}
+
+#button:hover {
+    background-color: black;
+}
+
+#button a:hover {
+    color: burlywood;
+}
+
+/*gradient horyzontalny tecza*/
+#rainbow {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+}
+
+/*responsywne video*/
+
+#videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 100vh;
+    width: 100%;
+}
+#videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    object-fit: cover;
+}
+ /*font awesome jako znacznik listy*/
+
+#list {
+    list-style: none;
+    padding: 50px;
+    
+}
+
+#list li {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+#list li:before {
+    font-family: 'FontAwesome';
+    content: "\f2c7";
+    color: red;
+    margin-right: 5px;
+}
+
+/*placeholder w formularzu*/
+
+#formularz {
+    padding: 10px;
+}
+#formularz label,
+#formularz input {
+    font-size: 30px;
+}
+
+::placeholder {
+    color: red;
+}
+
+/*nadanie innego koloru dla linku dla pobierania plikow doc*/
+#linki [href*=".doc"] {
+    color: red;
+}
+
+/*cytowanie*/
+#cytowany q {
+    quotes: "\0022" "\0022";
+}
+#cytowany q:lang(en) {
+    quotes: "\002A" "\002A";
+/*    musi byc dwa razy dziala tez z q[lang="en"]*/
+}
+
+#cytowany blockquote:lang(en)::before {
+    content: open-quote;
+    quotes: "\002A" "\002A";
+}
+
+#cytowany blockquote:lang(en)::after {
+    content: close-quote;
+    quotes: "\002A" "\002A";
+}
+
+#cytowany blockquote::before {
+    content: open-quote;
+    quotes: "\0022" "\0022";
+}
+
+#cytowany blockquote::after {
+    content: close-quote;
+    quotes: "\0022" "\0022";
+}
+
+/*stopka*/
+footer {
+    width: 100%;
+    background-color: palevioletred;
+    color: brown;
+    position: fixed;
+    bottom: 0;
+}
+
+/*snippet_11_serce*/
+
+#snippet_11_serce p{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+}
+
+#snippet_11_serce p i {
+    animation-name: bouncing;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    color: red;
+    font-size: 26px;
+}
+
+@keyframes bouncing {
+    0% 100% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+/*flip square*/
+
+#flip .square {
+/*    background-color: blue;*/
+    position: relative;
+    height: 300px;
+    width: 300px;
+    display: inline-block;
+    
+/*    transform-style: preserve-3d;*/
+    
+    
+}
+
+#flip .square .box {
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+#flip .square .front {
+    background-color: orange;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+#flip .square .back {
+    background-color: blue; 
+    transform: rotateY(180deg);
+}
+
+#flip .square:hover .front {
+    transform: rotateY(180deg);
+}
+
+#flip .square:hover .back {
+    transform: rotateY(0deg);
+}
+
+
+/*kurtyna*/
+
+#stage {
+    height: 100vh;
+    background-color: blue;
+    position: relative;
+}
+
+#stage .kurt {
+    height: 50%;
+    width: 100%;
+/*    display: inline-block;*/
+    position: absolute;
+    overflow: hidden; /*pozbyc sie paskow*/
+        animation-duration: 3s;
+    animation-timing-function:linear;
+}
+
+#stage .top {
+    top: 0;
+    background-color: red;
+    animation-name: kurtynatop;
+
+}
+
+#stage .bott {
+    bottom: 0;
+    background-color: green;
+    animation-name: kurtynabot;
+
+}
+
+@keyframes kurtynatop {
+    0% {
+        height: 0vh; /*top -50vh */
+    }
+    100% {
+        height: 50vh; /*top 0*/
+    }
+}
+
+@keyframes kurtynabot {
+    0% {
+        height: 0vh; /*bottom -50vh*/
+    }
+    100% {
+        height: -50vh; /*bottom 0*/
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
